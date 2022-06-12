@@ -16,9 +16,9 @@ public class ViewIndex extends RenderPagina {
 	//questo è il costruttore che inserisce all'interno dell'ArrList i vari paths dei files
 	private ViewIndex() {
 		this.percorsi = new ArrayList<String>();
-		this.percorsi.add("../PortFolioSite_Project/src/main/resources/static/js/main.js");
-		this.percorsi.add("../PortFolioSite_Project/src/main/resources/static/js/jquery-3.6.0.min.js");
-		this.percorsi.add("../PortFolioSite_Project/src/main/resources/static/js/header.js");
+//		this.percorsi.add("../PortFolioSite_Project/src/main/resources/static/js/main.js");
+//		this.percorsi.add("../PortFolioSite_Project/src/main/resources/static/js/jquery-3.6.0.min.js.t");
+//		this.percorsi.add("../PortFolioSite_Project/src/main/resources/static/js/header.js");
 		this.percorsi.add("../PortFolioSite_Project/src/main/resources/static/html/Index/IndexBody.txt");
 		}
 
