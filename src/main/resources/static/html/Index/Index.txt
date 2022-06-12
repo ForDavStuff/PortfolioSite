@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DFStuff</title>
     <script src="../Javascript/header.js"></script>
     <script src="../Javascript/jquery-3.6.0.min.js"></script>
@@ -17,7 +24,3 @@
     <div style="position: centered">
         <p>Mi chiamo Davide fornetti, ho 28 anni e so fare molte cose, ecco alcuni esempi:</p>
     </div>
-
-</body>
-
-</html>

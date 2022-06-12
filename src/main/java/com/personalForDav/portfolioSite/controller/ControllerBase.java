@@ -19,23 +19,17 @@ public class ControllerBase {
 	//metodo per richiamare la home con la mappatura della classe
 	@GetMapping
 	public String home() {
-		//ArrayList che si aspetta RenderPagina per trovare i percorsi da cui prendere il testo
-		ArrayList<String> percorsi = new ArrayList<String>();
 		
-		//percorsi che andranno a comporre la pagina richiesta, in questo caso la home
-		percorsi.add("../../../../../../resources/static/html/Header.txt");
-		percorsi.add("../../../../../../resources/static/html/Index.txt");
-
-		//inizializzo index con tipo formale ViewIndex, che sarebbe il tipo concreto
-		//con cui richiamare la Home (attraverso il metodo di RenderPagina
-		index = new ViewIndex();
-		//creo una stringa che sarà letteralmente la pagina HTML
-		String indexHtml = index.renderPagina(percorsi);
+		ViewIndex index = ViewIndex.getIndex();
+//		System.out.println(index.getPercorsi());
+		
+		//creo una stringa che sarà letteralmente la pagina HTML e la ritorno al client
+		String home = index.renderPagina(index.getPercorsi());
 		
 		//cerco di stampare in console la pagina HTML per capire perchè non funziona
-//		System.out.println(indexHtml);
+//		System.out.println(home);
 
-		return indexHtml;
+		return home;
 	}
 
 
