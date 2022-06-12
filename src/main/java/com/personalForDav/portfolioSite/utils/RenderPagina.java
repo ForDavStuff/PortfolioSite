@@ -7,8 +7,8 @@ import java.util.ArrayList;
 public abstract class RenderPagina implements IRenderPagina {
 
 	// metodo per renderizzare l'HTML fino agli script js
-	public String renderHTMLStart(String pagina) {
-		pagina += "<!DOCTYPE html>\r\n"
+	public String renderHTMLStart() {
+		String pagina = "<!DOCTYPE html>\r\n"
 				+ "<html lang=\"en\">\r\n"
 				+ "\r\n"
 				+ "<head>\r\n"
@@ -23,7 +23,8 @@ public abstract class RenderPagina implements IRenderPagina {
 	//richiamato da renderPagina()
 	//uguale a renderHTMLstart(), ma riceve un percorso e una stringa
 	//(da usare dentro a ciclo, per la lista di percorsi)
-	public String renderJS(String pagina, File file, ArrayList<String> percorsi) {
+	public String renderJS(ArrayList<String> percorsi) {
+		String pagina = "";
 		//faccio un ciclo per andare a iniettare gli <script>, usando il metodo .contains()
 		//per decidere se salvarne il contenuto
 		for (String unPercorso : percorsi) {
@@ -34,38 +35,53 @@ public abstract class RenderPagina implements IRenderPagina {
 		return pagina;
 	}
 
-	private String renderHTML(String pagina, File file, ArrayList<String> percorsi) {
-
-		//faccio un ciclo per andare a iniettare il HTML, usando il metodo .contains()
-		//per decidere se salvarne il contenuto
-		for (String unPercorso : percorsi) {
-			if (unPercorso.contains("html")) {
-				file = new File(unPercorso);
-				for (String riga : Lettore.leggiFile(file)) {
-					pagina += riga + "\n";
-				}
-			}
-		}
+	private String renderHTML(String percorso) {
+		
+				File file = new File(percorso);
+				String pagina = null;
+				pagina += Lettore.fileToString(file);
+			
+//		for (String riga : righePagina) {
+//			pagina += riga + "\n";
+//		}
 		return pagina;
 	}
+	
+//	private String renderHTML(ArrayList<String> percorsi) {
+//		String pagina = "";
+//		ArrayList<String> righePagina = new ArrayList<String>();
+//		//faccio un ciclo per andare a iniettare il HTML, usando il metodo .contains()
+//		//per decidere se salvarne il contenuto
+//		for (String unPercorso : percorsi) {
+//			if (unPercorso.contains("html")) {
+//				File file = new File(unPercorso);
+//				pagina += Lettore.fileToString(file);
+//			}
+//		}
+////		for (String riga : righePagina) {
+////			pagina += riga + "\n";
+////		}
+//		return pagina;
+//	}
 
 	//metodo che assembla tutti gli altri presenti
 	@Override
-	public String renderPagina(ArrayList<String> percorsi) {
+//	public String renderPagina(ArrayList<String> percorsi) {
+		public String renderPagina(String percorsi) {
 
 		//creo una stringa da passare a tutti i metodi che richiamo
-		String pagina = "";
-		File file =null;		
+//		String pagina = "";
+//		File file = null;		
 
 		//HTMLStart
 		//richiamo il metodo che mette <DOCTYPE> etc
-		pagina = renderHTMLStart(pagina);
+//		pagina += renderHTMLStart();
 
 		//JAVASCRIPT
-		pagina += renderJS(pagina, file, percorsi);
+//		pagina += renderJS(percorsi);
 		
 		//HTML
-		pagina += renderHTML(pagina, file, percorsi);
+		String pagina = renderHTML(percorsi);
 
 		// TODO Auto-generated method stub
 		return pagina;

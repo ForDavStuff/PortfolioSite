@@ -1,7 +1,7 @@
 package com.personalForDav.portfolioSite.view;
 
 import java.io.File;
-import java.nio.file.Paths;
+import java.nio.file.Path;
 import java.util.ArrayList;
 
 import com.personalForDav.portfolioSite.utils.Lettore;
@@ -11,15 +11,29 @@ public class ViewIndex extends RenderPagina implements IViewIndex {
 
 	//creo un singleton e un arrayList che sarà la pagina index
 	private static ViewIndex instance;
-	private ArrayList<String> percorsi = new ArrayList<String>();
+	private ArrayList<String> percorsi;
+	private String percorso;
 	
 	//questo è il costruttore che inserisce all'interno dell' ArrList i vari paths dei files
 	private ViewIndex() {
-		Paths path = null;
-		this.percorsi.add(path.get("\\src\\main\\resources\\static\\js\\", "main.js").getRoot().toString());
-		this.percorsi.add(path.get("\\src\\main\\resources\\static\\js\\", "jquery-3.6.0.min.js").getRoot().toString());
-		this.percorsi.add(path.get("\\src\\main\\resources\\static\\html\\", "Header.txt").getRoot().toString());
-		this.percorsi.add(path.get("\\src\\main\\resources\\static\\html\\Index\\", "Index.txt").getRoot().toString());
+//		this.percorso = "..\\main\\resources\\static\\html\\Index\\Index.txt";
+		this.percorso = "../PortFolioSite_Project/src/main/resources/static/html/Index/Index.txt";
+
+//		instance.percorsi = new ArrayList<String>();
+		
+//		Path path = path.getRoot();
+//		String filePath = "\\src\\main\\resources\\static\\html\\Index\\Index.txt";
+//		String rootDir = path.toString();
+//		ArrayList<String> basePath = new ArrayList<String>(rootDir.split("\\"));
+//		for(String i : rootDir.split("\\")) {
+//			
+//		}
+		
+		
+//		this.percorsi.add(path.get("\\src\\main\\resources\\static\\js\\", "main.js").getRoot().toString());
+//		this.percorsi.add(path.get("\\src\\main\\resources\\static\\js\\", "jquery-3.6.0.min.js").getRoot().toString());
+//		this.percorsi.add(path.get("\\src\\main\\resources\\static\\html\\", "Header.txt").getRoot().toString());
+//		this.percorsi.add(path.getPath("\\src\\main\\resources\\static\\html\\Index\\", "Index.txt").getRoot().toString());
 		}
 
 	//questo dovrebbe essere il costruttore del singleton
@@ -33,6 +47,10 @@ public class ViewIndex extends RenderPagina implements IViewIndex {
 	
 	public ArrayList<String> getPercorsi() {
 		return this.percorsi;
+	}
+	
+	public String getPercorso() {
+		return this.percorso;
 	}
 
 //	public void setPercorsi(ArrayList<String> percorsi) {

@@ -5,10 +5,10 @@ import java.util.ArrayList;
 
 public interface IRenderPagina {
 	
-	String renderHTMLStart(String pagina);
+	String renderHTMLStart();
 	
-	String renderJS(String pagina, File file, ArrayList<String> percorsi);
+	String renderJS(ArrayList<String> percorsi);
 	
-	String renderPagina(ArrayList<String> percorsi);
+	String renderPagina(String percorsi);
 
 }
