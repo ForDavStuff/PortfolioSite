@@ -23,7 +23,8 @@ public abstract class RenderPagina{
 	//richiamato da renderPagina()
 	//uguale a renderHTMLstart(), ma riceve un percorso e una stringa
 	private String renderJS(ArrayList<String> percorsi) {
-		String pagina = "";
+		String pagina = "<script src=\"../PortFolioSite_Project/src/main/resources/static/js/jquery-3.6.0.min.js\"></script>\n"
+					+	"<script src=\"../PortFolioSite_Project/src/main/resources/static/js/main.js\"></script>\n";
 		//faccio un ciclo per andare a iniettare gli <script>, usando il metodo .contains()
 		//per decidere se salvarne il contenuto
 		for (String unPercorso : percorsi) {
