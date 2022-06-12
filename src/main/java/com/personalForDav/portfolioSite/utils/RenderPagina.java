@@ -48,7 +48,7 @@ public abstract class RenderPagina{
 
 	private String renderHeader() {
 		File file = new File("../PortFolioSite_Project/src/main/resources/static/html/Header.txt");
-		String pagina = Lettore.fileToString(file);
+		String pagina = Lettore.fileToHTML(file);
 		return pagina;
 	}
 
@@ -60,7 +60,7 @@ public abstract class RenderPagina{
 		for (String unPercorso : percorsi) {
 			if (unPercorso.contains("html")) {
 				File file = new File(unPercorso);
-				pagina += Lettore.fileToString(file);
+				pagina += Lettore.fileToHTML(file);
 			}
 		}
 		return pagina;
@@ -68,7 +68,7 @@ public abstract class RenderPagina{
 	
 	private String renderFooter() {
 		File file = new File("../PortFolioSite_Project/src/main/resources/static/html/Footer.txt");
-		String pagina = Lettore.fileToString(file);
+		String pagina = Lettore.fileToHTML(file);
 		return pagina;
 	}
 

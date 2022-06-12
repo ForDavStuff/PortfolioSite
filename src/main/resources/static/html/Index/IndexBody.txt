@@ -1,12 +1,10 @@
-<div style="width:100%; height: 500px; padding: 0%, 50%; background-color: mediumblue;">
+    <div style="width:100%; height: 500px; padding: 0%, 50%; background-color: mediumblue;">
         <center>
-            <h1>Benvenuto sul mio sito!</h1>
+            <h1 id="titoloBenvenuto">Benvenuto sul mio sito!</h1>
+            <br><br>
+        <p>Mi chiamo Davide fornetti, ho 28 anni e so fare molte cose, ecco alcuni esempi:</p>
         </center>
         <img name = "header-logo" >
     </div>
-    <div id="header">
-    </div>
-
-    <div style="position: centered">
-        <p>Mi chiamo Davide fornetti, ho 28 anni e so fare molte cose, ecco alcuni esempi:</p>
+    <div>
     </div>

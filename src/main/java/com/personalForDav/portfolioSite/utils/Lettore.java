@@ -105,6 +105,33 @@ public class Lettore {
 		return list;
 	}
 	
+	public static String fileToHTML(File file){
+		ArrayList<String> list = new ArrayList<String>();
+		String fileString = "";
+		try {
+			fileIN = new Scanner(file);
+			
+			while(fileIN.hasNextLine()) {
+				list.add(fileIN.nextLine());
+			}
+			for (String s : list) {
+				fileString += s + "\n";
+			}
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("ERRORE: File non trovato, percorso non corretto...");
+			e.printStackTrace();
+		}  catch (NullPointerException e) {
+			System.out.println("ERRORE: Percorso non valido...");
+			e.printStackTrace();
+		} finally {
+			if (fileIN != null)
+				closeFile();
+		}
+		
+		return fileString;
+	}
+	
 	public static String fileToString(File file){
 		ArrayList<String> list = new ArrayList<String>();
 		String fileString = "";
