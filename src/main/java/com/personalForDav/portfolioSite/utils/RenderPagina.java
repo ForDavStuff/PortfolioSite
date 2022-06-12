@@ -40,7 +40,7 @@ public abstract class RenderPagina{
 		//per decidere se salvarne il contenuto
 		for (String unPercorso : percorsi) {
 			if (unPercorso.contains("css")) {
-				pagina += "<style src=\"" + unPercorso + "\"></style>\n";
+				pagina += "<link rel=\"stylesheet\" href=\"" + unPercorso + "\">\n";
 			}
 		}
 		return pagina;
