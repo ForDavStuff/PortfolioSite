@@ -22,10 +22,10 @@ public class ControllerBase {
 		
 		ViewIndex index = ViewIndex.getIndex();
 		
-		System.out.println(index.getPercorso());
+		System.out.println(index.getPercorsi());
 		
 		//creo una stringa che sarà letteralmente la pagina HTML e la ritorno al client
-		String home = index.renderPagina(index.getPercorso());
+		String home = index.renderPagina(index.getPercorsi());
 		
 		//cerco di stampare in console la pagina HTML per capire perchè non funziona
 		System.out.println(home);

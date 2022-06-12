@@ -24,7 +24,3 @@
     <div style="position: centered">
         <p>Mi chiamo Davide fornetti, ho 28 anni e so fare molte cose, ecco alcuni esempi:</p>
     </div>
-
-</body>
-
-</html>
