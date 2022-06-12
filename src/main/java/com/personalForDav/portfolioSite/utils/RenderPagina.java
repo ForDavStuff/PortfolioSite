@@ -29,7 +29,7 @@ public abstract class RenderPagina{
 		//per decidere se salvarne il contenuto
 		for (String unPercorso : percorsi) {
 			if (unPercorso.contains("js")) {
-				pagina += "<script src=\"" + unPercorso + "\"></script>\n";
+				pagina += "<script>" + Lettore.fileToHTML(new File(unPercorso)) + "</script>\n";
 			}
 		}
 		return pagina;
