@@ -9,8 +9,8 @@ import com.personalForDav.portfolioSite.utils.RenderPagina;
 import com.personalForDav.portfolioSite.view.ViewIndex;
 
 @RestController
-@SpringBootApplication
-@RequestMapping ({"/", "/home"})
+//@RequestMapping ({"/", "/home"})
+@RequestMapping ("/")
 public class ControllerBase {
 
 	//richiama la classe che farà da "assemblatore" della pagina, il tipo formale è abstract
