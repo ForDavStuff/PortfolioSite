@@ -24,7 +24,8 @@ public class ControllerBase {
 //		System.out.println(index.getPercorsi());
 		
 		//creo una stringa che sarà letteralmente la pagina HTML e la ritorno al client
-		String home = index.renderPagina(index.getPercorsi());
+//		String home = index.renderPagina(index.getPercorsi());
+		String home = index.getIndexHTML();
 		
 		//cerco di stampare in console la pagina HTML per capire perchè non funziona
 //		System.out.println(home);
