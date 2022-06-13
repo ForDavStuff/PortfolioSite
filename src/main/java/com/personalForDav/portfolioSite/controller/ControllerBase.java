@@ -1,7 +1,6 @@
 package com.personalForDav.portfolioSite.controller;
 
-import java.util.ArrayList;
-
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,11 +9,12 @@ import com.personalForDav.portfolioSite.utils.RenderPagina;
 import com.personalForDav.portfolioSite.view.ViewIndex;
 
 @RestController
+@SpringBootApplication
 @RequestMapping ({"/", "/home"})
 public class ControllerBase {
 
 	//richiama la classe che farà da "assemblatore" della pagina, il tipo formale è abstract
-	private RenderPagina index = null;
+//	private RenderPagina index = null;
 
 	//metodo per richiamare la home con la mappatura della classe
 	@GetMapping
