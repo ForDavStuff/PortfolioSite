@@ -52,7 +52,7 @@ public class ViewIndex extends RenderPagina {
 				+ "        <center>\r\n"
 				+ "            <h1 id=\"titoloBenvenuto\">Benvenuto sul mio sito!</h1>\r\n"
 				+ "            <br><br>\r\n"
-				+ "        <p>Mi chiamo Davide fornetti, ho 28 anni e so fare molte cose, ecco alcuni esempi:</p>\r\n"
+				+ "        <p>Mi chiamo Davide fornetti, ho 28 anni e faccio cose, ecco alcuni esempi:</p>\r\n"
 				+ "        </center>\r\n"
 				+ "        <img name = \"header-logo\" >\r\n"
 				+ "    </div>\r\n"
