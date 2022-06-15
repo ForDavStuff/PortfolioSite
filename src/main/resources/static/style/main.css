@@ -1,0 +1,14 @@
+body {
+    background-color: #F2F2F2;
+}
+
+.titolo {
+    color: #002736;
+    padding: 30px, 200px;
+}
+
+.bkgTitolo {
+    width: 66%;
+    /*height: 500px; */
+    background-color: #00C4EC;
+} 
