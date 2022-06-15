@@ -45,7 +45,7 @@ public class ViewIndex extends RenderPagina {
 				+ "    <script src=\"./script/header.js\"></script>\r\n"
 				+ "    <script src=\"./script/jquery-3.6.0.min.js\"></script>\r\n"
 				+ "    <script src=\"./script/main.js\"></script>\r\n"
-				+ "    <link href=\"main.css\" rel=\"stylesheet\">\r\n"
+				+ "    <link href=\"./css/main.css\" rel=\"stylesheet\">\r\n"
 				+ "  </head>\r\n"
 				+ "\r\n"
 				+ "  <body>\r\n"
