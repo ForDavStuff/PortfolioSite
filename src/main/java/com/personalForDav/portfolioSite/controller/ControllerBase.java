@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.personalForDav.portfolioSite.utils.RenderPagina;
+import com.personalForDav.portfolioSite.view.ViewHeader;
 import com.personalForDav.portfolioSite.view.ViewIndex;
 
 @RestController
@@ -31,7 +32,7 @@ public class ControllerBase {
 //		System.out.println(home);
 
 //		return home;
-		return index.getIndexHTML();
+		return index.getHomepage();
 	}
 
 
